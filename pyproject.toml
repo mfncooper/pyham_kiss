@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pyham_kiss"
+description = "KISS TNC Protocol Client for TCP/IP"
+keywords = [
+        "ham radio", "amateur radio", "packet radio",
+        "KISS", "TNC", "protocol"
+]
+authors = [{name = "Martin F N Cooper", email = "mfncooper@gmail.com"}]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Communications :: Ham Radio"
+]
+requires-python = ">=3.7"
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://pyham_kiss.readthedocs.io"
+"Source Code" = "https://github.com/mfncooper/pyham_kiss"
+
+[tool.flit.module]
+name = "kiss"
+
+[tool.flit.sdist]
+include = [
+    "docs/",
+    "examples/",
+    "tox.ini"
+]
+exclude = [
+    "docs/_build/"
+]
