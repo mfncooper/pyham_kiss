@@ -82,9 +82,10 @@ class Connection:
     TNC.
 
     :param callback: Callback function to invoke with each received frame. The
-        data is provided to the function as a bytearray. Optional. Can be
-        omitted if the client has no interest in received frames (e.g. for
-        a one-shot beaconing application).
+        function takes the form ``receive_callback(kiss_port, data)`` where
+        ``kiss_port`` is the port number on which the frame was received, and
+        ``data`` is a bytearray. Optional. Can be omitted if the client has no
+        interest in received frames (e.g. for a one-shot beaconing application).
     :type callback: function or None
     """
     def __init__(self, callback):
