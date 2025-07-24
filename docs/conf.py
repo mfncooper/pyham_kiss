@@ -12,7 +12,7 @@ import kiss
 # -- Project information -----------------------------------------------------
 
 project = 'PyHam KISS'
-copyright = '2024, Martin F N Cooper. All rights reserved'
+copyright = '2024-2025, Martin F N Cooper. All rights reserved'
 author = 'Martin F N Cooper'
 release = kiss.__version__
 version = release
